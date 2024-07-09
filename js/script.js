@@ -70,5 +70,9 @@ function checkNumbers(userNumbers) {
     document.getElementById('results').innerHTML = `Hai indovinato ${Count} numeri, ovvero: ${correctNumbers.join(' ')}`;
 }
 
+// Chiamata delle funzioni
+let numbers = randomNumbers();
+showNumbers(numbers);
+Timer(30, document.getElementById('timer'));
 
 
