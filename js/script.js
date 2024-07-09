@@ -37,6 +37,21 @@ function showNumbers(numbers) {
     document.getElementById('numbers').innerHTML = numbers.join(' ');
 }
 
+// Funzione per chiedere all'utente di inserire i numeri tramite prompt
+function promptUser() {
+    let userNumbers = [];
+    for (let i = 0; i < 5; i++) {
+        let userInput = parseInt(prompt("Inserisci uno dei numeri che hai visto:"));
+        if (!isNaN(userInput)) {
+            userNumbers.push(userInput);
+        } else {
+            alert("Per favore, inserisci un numero valido.");
+            i--;
+        }
+    }
+    checkNumbers(userNumbers);
+}
+
 
 
 
