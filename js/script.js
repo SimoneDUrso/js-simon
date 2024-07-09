@@ -52,6 +52,23 @@ function promptUser() {
     checkNumbers(userNumbers);
 }
 
+// Funzione che controlla i numeri inseriti dall'utente
+function checkNumbers(userNumbers) {
+    let Count = 0;
+    let correctNumbers = [];
+
+    for (let i = 0; i < numbers.length; i++) {
+        for (let j = 0; j < userNumbers.length; j++) {
+            if (numbers[i] === userNumbers[j]) {
+                Count++;
+                correctNumbers.push(numbers[i]);
+
+            }
+        }
+    }
+
+    document.getElementById('results').innerHTML = `Hai indovinato ${Count} numeri, ovvero: ${correctNumbers.join(' ')}`;
+}
 
 
 
