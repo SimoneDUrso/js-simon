@@ -32,5 +32,11 @@ function hideNumbers() {
     document.getElementById('numbers').innerHTML = '';
 }
 
+// Funzione per mostrare i numeri all'utente su schermo
+function showNumbers(numbers) {
+    document.getElementById('numbers').innerHTML = numbers.join(' ');
+}
+
+
 
 
