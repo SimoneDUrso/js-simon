@@ -12,6 +12,21 @@ function randomNumbers() {
     return randomNumbers;
 }
 
+// Funzione che avvia il timer di 30 secondi
+function Timer(duration, show) {
+    let timer = duration;
+    let interval = setInterval(function () {
+        show.innerHTML = timer + " secondi rimanenti";
+
+        if (timer-- < 0) {
+            clearInterval(interval);
+            show.innerHTML = '';
+            hideNumbers();
+            setTimeout(promptUser, 500);
+        }
+    }, 1000);
+}
+
 
 
 
