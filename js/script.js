@@ -27,6 +27,10 @@ function Timer(duration, show) {
     }, 1000);
 }
 
+// Funzione che nasconde i numeri
+function hideNumbers() {
+    document.getElementById('numbers').innerHTML = '';
+}
 
 
 
